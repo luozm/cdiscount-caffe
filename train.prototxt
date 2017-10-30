@@ -1,0 +1,42 @@
+# -------------------------
+# General settings
+
+#net: "DenseNet_121_train.prototxt"
+net: "SeResNet_50.prototxt"
+
+display: 50
+
+snapshot: 5000
+#snapshot_prefix: "models/densenet"
+snapshot_prefix: "models/se_resnet_50"
+
+solver_mode: GPU
+
+# Total training iterations (num_total_iterations)
+max_iter: 10000
+
+# indicates how many test iterations should occur per test_interval
+#test_iter: 1000
+
+# Test for every epoch
+#test_interval: 1000
+
+
+# -------------------------
+# Optimizer
+
+type: "SGD"
+base_lr: 0.01
+
+# Learning rate policy indicates how the learning rate should change over time
+lr_policy: "step"
+
+# drop the learning rate by a factor of 10
+gamma: 0.1
+
+momentum: 0.1
+
+weight_decay: 0.0005
+
+# drop the learning rate every stepsize iterations
+stepsize: 5000

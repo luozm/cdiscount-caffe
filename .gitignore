@@ -1,0 +1,7 @@
+# model files
+/**/*.caffemodel
+/**/*.solverstate
+
+# input files
+/**/*.mdb
+
